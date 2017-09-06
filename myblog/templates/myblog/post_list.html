@@ -20,5 +20,17 @@
 
     <div>
         <ul><li>Is dis list? I dunno if it works yet</li><li>I really hope it does</li><li> what do you think?</li></ul>
-    
+    {% for post in posts %}
+        {{post}}
+    {%endfor%}
+    </div>
+
+
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date}}</p>
+            <h1><a href=''>{{post.title}}</a></h1>
+            <p>{{post.text|linebreaksbr}} </p>
+        </div>
+    {%endfor%}  
 </html>
